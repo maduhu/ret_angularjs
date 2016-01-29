@@ -1,0 +1,29 @@
+<script>
+	$(document).ready(function(){
+		new WOW().init();
+		
+	});
+</script>
+
+<header class="capitulos">
+	<h1>{{category.name}}</h1>
+	<div>
+		<a href="#"><img src="http://localhost/wordpress/wp-content/themes/ret_angularjs/img/icon/grid.png">ver cuadrícula</a>
+		<a href="#"><img src="http://localhost/wordpress/wp-content/themes/ret_angularjs/img/icon/list.png">ver índice</a>
+	</div>
+</header>
+
+<div class="contenedor grid">
+	<div class="texto_intro"><h3>Conocimiento como puente entre biodiversidad, sociedad y desarrollo</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. In tristique risus ut cursus gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus  ut cursus gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. In tristique risus ut cursus gravida donec varius ultrices ipsum, quis blandit mauris sodales nec.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. In tristique risus ut cursus gravida.Mauris pharetra sed nisl a accumsan. Donec blandit dapibus libero a laoreet... </p><a href="#" class="read_more">LEER MÁS</a>
+	</div>
+	<a href="blog/{{post.ID}}" class="card"  ng-repeat="post in data.posts">
+		<div>
+			<h2 ng-bind-html="post.scrub"></h2>
+			<h4 ng-bind-html="post.title">	</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Itristique risus ut cursus gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpiet sem eleifend maximus. In tristique risus ut cursus gravida donec varius ultrices ipsum, quis blandimauris sodales nec.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Itristique risus ut cursus gravida.Mauris pharetra sed nisl a accumsan. ... </p><p><strong>+LEER MÁS</strong></p>
+		</div>
+	</a>
+	</div>

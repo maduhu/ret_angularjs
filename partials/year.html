@@ -1,0 +1,27 @@
+<script>
+	new WOW().init();
+	$( ".white" ).addClass( 'black' );
+  	$( ".white" ).removeClass( 'white' );
+</script>
+
+<header class="capitulos">
+	<h1 ng-bind-html="res"></h1>
+	<div>
+		<a href="#"><img src="http://localhost/wordpress/wp-content/themes/ret_angularjs/img/icon/grid.png">ver cuadrícula</a>
+		<a href="#"><img src="http://localhost/wordpress/wp-content/themes/ret_angularjs/img/icon/list.png">ver índice</a>
+	</div>
+</header>
+
+<div class="contenedor grid">
+	<div class="texto_intro"><h3>Conocimiento como puente entre biodiversidad, sociedad y desarrollo</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. In tristique risus ut cursus gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus  ut cursus gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. In tristique risus ut cursus gravida donec varius ultrices ipsum, quis blandit mauris sodales nec.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. In tristique risus ut cursus gravida.Mauris pharetra sed nisl a accumsan. Donec blandit dapibus libero a laoreet... </p><a href="#" class="read_more">LEER MÁS</a>
+	</div>
+	<a href="categories/{{category.ID}}" class="card"  ng-repeat="category in data.categories" ng-style="{'background-image':'url(/static/'+imgURL+')'}">
+		<div>
+			<h2 ng-bind-html="category.slug"></h2>
+			<h4 ng-bind-html="category.name">	</h4>
+			<p ng-bind-html="category.description"></p>
+		</div>
+	</a>
+	</div>

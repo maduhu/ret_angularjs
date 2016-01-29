@@ -1,0 +1,48 @@
+<script>
+	$('.close').click(function() {
+		console.log("close");
+		$('.window').fadeOut('slow');
+		$(".hexa_grid li").css("opacity", 1);
+	});
+</script>
+<div class="window">
+	<div class="intro wow fadeIn" data-wow-delay="1s">
+		<div ng-hide="homeSelector">
+			<a href="#" class="close"><img src="http://localhost/wordpress/wp-content/themes/ret_angularjs/img/icon/close_g.png"></a>
+			<H2>SERIE</H2>
+			<h1><strong>BIO</strong>DIVERSIDAD</h1>
+			<h3>REPORTE DE ESTADO Y TENDENCIAS DE LA BIODIVERSIDAD CONTINENTAL</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a turpis et sem eleifend maximus. Intristique risus ut cursus gravida. Mauris pharetra sed nisl a accumsan. Donec blandit dapibus libero a laoreet.Donec varius ultrices ipsum, quis blandit mauris sodales nec.</p>
+			<img ng-src="{{$location.path(templateUrl)}}img/logo_naranja.png">
+			<img src="http://localhost/wordpress/wp-content/themes/ret_angularjs/img/logo_conexion.png">
+			<a href="#" class="blue_btn" ng-click="homeSelector=true" >ENTRAR</a>
+		</div>
+		<div class="selector ng-hide" ng-show="homeSelector">
+			<a href="#" class="close"><img src="http://localhost/wordpress/wp-content/themes/ret_angularjs/img/icon/close_g.png"></a>
+			<h3>EXPLORA POR AÑO</h3>
+			<div class="border_top"></div>
+			<div>
+				<a href="categories/{{category.slug}}" ng-click="fondo='black'" ng-repeat="category in data.categories | filter:2015" ><h2 ng-bind-html="category.name"></h2></a>
+			</div>
+			
+			<div href="#" class="search">
+				<input type="text" placeholder="BUSCA EN EL RET"/>
+				<a href="#"><img src="http://localhost/wordpress/wp-content/themes/ret_angularjs/img/icon/search_az.png"></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="home" >
+	<div class="hexa_grid">
+		<ul class="clr">
+		  <li class="wow fadeIn" data-wow-delay="0s" ng-repeat="post in data.posts">
+		    <a href="blog/{{post.ID}}">
+		      <img ng-src="{{post.featured_image.attachment_meta.sizes.thumbnail.url}}" alt="" />
+		      <h1>{{post.slug}}</h1>
+		      <p>{{ post.title | limitTo:50}}</p>
+		    </a>
+		  </li>
+		</ul>
+	</div>
+</div>
